@@ -29,7 +29,7 @@ public class Main {
         }
     }
 
-    public static void checkUserOS(int, int clientDeviceYear) {
+    public static void checkUserOS(int userOS, int userDeviceYear) {
         System.out.println("///Task2");
         if (userDeviceYear < 2015) {
             switch (userOS) {
