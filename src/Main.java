@@ -55,16 +55,10 @@ public class Main {
 
     public static void checkDeliveryDistance(int deliveryDistance) {
         System.out.println("///Task3");
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: 1");
+        if (deliveryDistance > 0 && deliveryDistance < 3000) {
+            System.out.println("Время доставки = " + ((deliveryDistance + 19) / 40 + 1));
+            return;
         }
-        if (deliveryDistance > 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: 2");
-        }
-        if (deliveryDistance > 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: 3");
-        } else {
-            System.out.println("Доставка не осуществляется");
-        }
+        System.out.println("Доставка не осуществляется");
     }
 }
