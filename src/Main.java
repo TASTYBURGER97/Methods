@@ -14,22 +14,21 @@ public class Main {
 
 
         ///Task3
-        int deliveryDistance = 110;
+        int deliveryDistance = 100;
         checkDeliveryDistance(deliveryDistance);
     }
 
 
-    public static void checkIFYearLeap(int year) {
-        System.out.println("///Task1");
+    public static boolean checkIFYearLeap(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println("год" + year + "является високосным");
+            return true; // год является високосным
         } else {
-            System.out.println("год" + year + " не является високосным");
-
+            return false; // год не является високосным
         }
     }
 
-    public static void checkUserOS(int userOS, int userDeviceYear) {
+
+    public static boolean checkUserOS(int userOS, int userDeviceYear) {
         System.out.println("///Task2");
         if (userDeviceYear < 2015) {
             switch (userOS) {
@@ -50,23 +49,24 @@ public class Main {
             }
 
         }
+        return false;
     }
 
 
-    public static void checkDeliveryDistance (int deliveryDistance){
+    public static boolean checkDeliveryDistance(int deliveryDistance) {
         System.out.println("///Task3");
-        if(deliveryDistance<=20){
+        if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: 1");
-        }
-        else if (deliveryDistance>20 && deliveryDistance<60){
+        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
             System.out.println("Потребуется дней: 2");
-        }
-        else if (deliveryDistance>60 && deliveryDistance<100){
+        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
             System.out.println("Потребуется дней: 3");
-        }else {
+        } else {
             System.out.println("Доставка не осуществляется");
         }
-        }
+
+        return false;
     }
+}
 
 
