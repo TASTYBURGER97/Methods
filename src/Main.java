@@ -14,7 +14,7 @@ public class Main {
 
 
         ///Task3
-        int deliveryDistance = 100;
+        int deliveryDistance = 90;
         checkDeliveryDistance(deliveryDistance);
     }
 
@@ -28,7 +28,7 @@ public class Main {
     }
 
 
-    public static boolean checkUserOS(int userOS, int userDeviceYear) {
+    public static void checkUserOS(int userOS, int userDeviceYear) {
         System.out.println("///Task2");
         if (userDeviceYear < 2015) {
             switch (userOS) {
@@ -49,14 +49,15 @@ public class Main {
             }
 
         }
-        return false;
+
     }
 
 
-    public static boolean checkDeliveryDistance(int deliveryDistance) {
+    public static void checkDeliveryDistance(int deliveryDistance) {
         System.out.println("///Task3");
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: 1");
+
         } else if (deliveryDistance > 20 && deliveryDistance < 60) {
             System.out.println("Потребуется дней: 2");
         } else if (deliveryDistance > 60 && deliveryDistance < 100) {
@@ -64,9 +65,10 @@ public class Main {
         } else {
             System.out.println("Доставка не осуществляется");
         }
-
-        return false;
     }
 }
+
+
+
 
 
